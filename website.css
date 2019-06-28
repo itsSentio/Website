@@ -1,0 +1,30 @@
+
+.Buttons {
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+.LeftButton {
+  background-color: Red;
+  display: inline-block;
+  Border: black 2px solid;
+  width: 30%;
+ height: 120px;
+}
+.RightButton {
+  background-color: Blue;
+  display: inline-block;
+  Border: black 2px solid;
+  width: 30%;
+ height: 120px;
+}
+#Boost {
+  color: Blue;
+  padding: 20px;
+}
+#GetBoosted {
+  color: Red;
+  padding: 20px;
+}
