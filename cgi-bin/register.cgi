@@ -2,6 +2,8 @@
 import mysql.connector
 import cgi
 
+cgitb.enable()
+
 db = mysql.connector.connect(
   host="162.241.24.152",
   user="wnwyyumy_main",
