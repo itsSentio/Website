@@ -5,7 +5,7 @@
      <body>
        <title>Register Test</title>
 
-       <form action="register.cgi" method="post">
+       <form action="test.cgi" method="post">
          Username:<br>
          <input type="text" name="username"><br>
          Password:<br>
