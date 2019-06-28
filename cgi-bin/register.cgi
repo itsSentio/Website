@@ -1,12 +1,23 @@
 #!/usr/bin/python
 import mysql.connector
+import cgi
 
 db = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  passwd="wilddog1015"
+  host="162.241.24.152",
+  user="wnwyyumy_main",
+  passwd="Pizzapants98"
 )
 
-#sql = "INSERT INTO accounts (name, password) VALUES (%s, %s)"
-
 cursor = db.cursor()
+
+form = cgi.FieldStorage()
+user = form.getvalue('username')
+password = form.getvalue('password')
+confirmpassword = form.getvalue('confirmpassword')
+
+if (password == confirmpassword):
+  sql = "INSERT INTO accounts (name, password) VALUES (%s, %s)"
+  val = (user, password)
+  cursor.execute(sql, val)
+else:
+  pass
