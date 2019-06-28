@@ -5,7 +5,7 @@
      <body>
        <title>Register Test</title>
 
-       <form action="register.py" method="post">
+       <form action="register.cgi" method="post">
          Username:<br>
          <input type="text" name="username"><br>
          Password:<br>
