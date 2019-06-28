@@ -1,4 +1,4 @@
-#!/usr/bin/python   
+#!/usr/bin/python
 import mysql.connector
 
 db = mysql.connector.connect(
