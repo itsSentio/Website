@@ -20,9 +20,7 @@ if ($formpass === $formconfirmpass) {
   $sql = "INSERT INTO accounts (username, email, password, submission_date)
   VALUES ('$formuser', '$formemail', '$formpass', '$date')";
 } else {
-  <style type="text/css">#passmatch {
-    display: block;
-  } </style>
+  document.getElementById("passmatch").style.display = "block";
 }
 
 if ($conn->query($sql) === TRUE) {
