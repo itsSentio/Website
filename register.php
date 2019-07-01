@@ -17,7 +17,7 @@ $formconfirmpass = $_POST['confirmpassword'];
 
 if ($formpass === $formconfirmpass) {
   $sql = "INSERT INTO accounts (username, email, password, submission_date)
-  VALUES ('$formuser', '$formemail', '$formpass', 'Auto CURDATE()')";
+  VALUES ('$formuser', '$formemail', '$formpass', 'date("Y-m-d H:i:s")')";
 } else {
   echo "Error: passwords do not match";
 }
