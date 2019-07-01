@@ -5,9 +5,11 @@
      <body>
        <title>Register Test</title>
 
-       <form action="cgi-bin/test.cgi" method="post">
+       <form action="register.php" method="post">
          Username:<br>
          <input type="text" name="username"><br>
+         Email:<br>
+         <input type="text" name="email"><br>
          Password:<br>
          <input type="text" name="password"><br>
          Confirm Password:<br>
