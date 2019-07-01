@@ -19,14 +19,10 @@ $date = date('Y-m-d H:i:s');
 if ($formpass === $formconfirmpass) {
   $sql = "INSERT INTO accounts (username, email, password, submission_date)
   VALUES ('$formuser', '$formemail', '$formpass', '$date')";
-} else {
-  document.getElementById("passmatch").style.display = "block";
 }
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
