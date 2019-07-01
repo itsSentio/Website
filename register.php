@@ -14,10 +14,11 @@ $formuser = $_POST['username'];
 $formemail = $_POST['email'];
 $formpass = $_POST['password'];
 $formconfirmpass = $_POST['confirmpassword'];
+$date = date('Y-m-d H:i:s');
 
 if ($formpass === $formconfirmpass) {
   $sql = "INSERT INTO accounts (username, email, password, submission_date)
-  VALUES ('$formuser', '$formemail', '$formpass', 'date("Y-m-d H:i:s")')";
+  VALUES ('$formuser', '$formemail', '$formpass', '$date'";
 } else {
   echo "Error: passwords do not match";
 }
