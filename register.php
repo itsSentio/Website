@@ -20,7 +20,9 @@ if ($formpass === $formconfirmpass) {
   $sql = "INSERT INTO accounts (username, email, password, submission_date)
   VALUES ('$formuser', '$formemail', '$formpass', '$date')";
 } else {
-  echo "Error: passwords do not match";
+  <style type="text/css">#passmatch {
+    display: block;
+  } </style>
 }
 
 if ($conn->query($sql) === TRUE) {
