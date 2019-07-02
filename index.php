@@ -26,9 +26,9 @@
 
        passConField.addEventListener('keyup', function(event) {
          if (passConField == passField) {
-           passMatch.disabled = true;
+           passMatch.style.display = "none";
          } else {
-           passMatch.disabled = false;
+           passMatch.style.display = "block";
          }
        });
        </script>
