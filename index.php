@@ -10,11 +10,12 @@
          <input type="text" name="username" id="usernamefield"><br>
          Email:<br>
          <input type="email" name="email" id="emailfield"><br>
-         Password:<br><p id="passmatch">Passwords must match</p>
+         Password:<br>
          <input type="text" name="password" id="passwordfield"><br>
          Confirm Password:<br>
          <input type="text" name="confirmpassword" id="confirmpasswordfield"><br><br>
          <input type="submit" value="Register">
+         <p id="passmatch">Passwords must match</p>
        </form>
      </body>
      <script src=listener.js></script>
