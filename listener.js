@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const passConField = document.getElementById('confirmpasswordfield');
   const passMessage = document.getElementById('passwordvalidation')
   const emailMessage = document.getElementById('emailvalidation')
+  const strengthMessage = document.getElementById('passwordstrengthvalidation')
 
   function strengthCheck(password) {
         var regExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()]).{8,}/;
@@ -27,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   passField.addEventListener('keyup', function(event) {
     if (strengthCheck(passField.value)) {
-
+      strengthMessage.style.display = "none";
+    } else {
+      strengthMessage.style.display = "block";
     }
 
     if (passConField.value == passField.value) {
