@@ -27,8 +27,10 @@
        passConField.addEventListener('keyup', function(event) {
          if (passConField == passField) {
            passMatch.style.display = "none";
+           passConField.style.borderColor = 'green';
          } else {
            passMatch.style.display = "block";
+           passConField.style.borderColor = 'red';
          }
        });
        </script>
