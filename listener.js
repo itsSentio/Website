@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const submitButton = document.getElementById('submitbutton')
 
   function submitReady() {
-    console.log(validEmail)
     if (validEmail && passwordStrength && passwordMatches) {
       submitButton.disabled = false;
     }
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   emailField.addEventListener('keyup', function(event) {
     isValidEmail = emailField.checkValidity();
-
+    submitReady()
     if (isValidEmail) {
       emailMessage.style.display = "none";
       emailField.style.borderColor = "black";
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   passField.addEventListener('keyup', function(event) {
-    console.log(strengthCheck(passField.value));
+    submitReady()
     if (strengthCheck(passField.value)) {
       strengthMessage.style.display = "none";
       passwordStrength = true;
@@ -58,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   passConField.addEventListener('keyup', function(event) {
+    submitReady()
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
