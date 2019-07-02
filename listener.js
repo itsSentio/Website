@@ -9,12 +9,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const strengthMessage = document.getElementById('passwordstrengthvalidation')
   const submitButton = document.getElementById('submitbutton')
 
-  function submitReady() {
-    if (validEmail && passwordStrength && passwordMatches) {
-      submitButton.disabled = false;
-    }
-  }
-
   function strengthCheck(password) {
         var regExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()]).{8,}/;
         var validPassword = regExp.test(password);
@@ -23,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   emailField.addEventListener('keyup', function(event) {
     isValidEmail = emailField.checkValidity();
-    submitReady()
     if (isValidEmail) {
       emailMessage.style.display = "none";
       emailField.style.borderColor = "black";
@@ -33,10 +26,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       emailField.style.borderColor = "red";
       validEmail = false;
     }
+    if (validEmail && passwordStrength && passwordMatches) {
+      submitButton.disabled = false;
+    }
   });
 
   passField.addEventListener('keyup', function(event) {
-    submitReady()
     if (strengthCheck(passField.value)) {
       strengthMessage.style.display = "none";
       passwordStrength = true;
@@ -54,10 +49,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       passConField.style.borderColor = 'red';
       passwordMatches = false;
     }
+    if (validEmail && passwordStrength && passwordMatches) {
+      submitButton.disabled = false;
+    }
   });
 
   passConField.addEventListener('keyup', function(event) {
-    submitReady()
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
@@ -66,6 +63,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       passMessage.style.display = "block";
       passConField.style.borderColor = 'red';
       passwordMatches = false;
+    }
+    if (validEmail && passwordStrength && passwordMatches) {
+      submitButton.disabled = false;
     }
   });
 });
