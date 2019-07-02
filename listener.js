@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   emailField.addEventListener('keyup', function(event) {
     isValidEmail = emailField.checkValidity();
-    submitReady()
     if (isValidEmail) {
       emailMessage.style.display = "none";
       emailField.style.borderColor = "black";
@@ -37,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       emailField.style.borderColor = "red";
       validEmail = false;
     }
+    submitReady()
   });
 
   passField.addEventListener('keyup', function(event) {
-    submitReady()
     if (strengthCheck(passField.value)) {
       strengthMessage.style.display = "none";
       passwordStrength = true;
@@ -58,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       passConField.style.borderColor = 'red';
       passwordMatches = false;
     }
+    submitReady()
   });
 
   passConField.addEventListener('keyup', function(event) {
-    submitReady()
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
@@ -71,5 +70,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       passConField.style.borderColor = 'red';
       passwordMatches = false;
     }
+    submitReady()
   });
 });
