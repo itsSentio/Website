@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   passField.addEventListener('keyup', function(event) {
+    console.log(strengthCheck(passField.value));
     if (strengthCheck(passField.value)) {
       strengthMessage.style.display = "none";
     } else {
