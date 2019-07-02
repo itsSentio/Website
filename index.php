@@ -11,9 +11,9 @@
          Email:<br>
          <input type="email" name="email" id="emailfield"><br>
          Password:<br>
-         <input type="text" name="password" id="passwordfield"><br>
+         <input type="password" name="password" id="passwordfield"><br>
          Confirm Password:<br>
-         <input type="text" name="confirmpassword" id="confirmpasswordfield"><br><br>
+         <input type="password" name="confirmpassword" id="confirmpasswordfield"><br><br>
          <input type="submit" value="Register" id="submitbutton" disabled>
          <p id="passwordvalidation">Passwords must match</p>
          <p id="emailvalidation">Must be a valid email address</p>
