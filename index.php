@@ -5,19 +5,33 @@
     </head>
     <body>
       <title>Register Test</title>
-        <form action="register.php" method="post">
+        <form id="registerForm" action="register.php" method="post">
          Username:<br>
          <input type="text" name="username"><br>
          Email:<br>
-         <input type="text" name="email"><br>
+         <input type="email" name="email"><br>
          Password:<br>
-         <input type="text" name="password">
-         <?php if($_GET['password'] != $_GET['confirmpassword']) : ?>
-           <p id="passmatch">Passwords must match</p>
-         <?php endif; ?><br>
+         <input type="text" name="password"><p id="passmatch"> Passwords must match</p><br>
          Confirm Password:<br>
          <input type="text" name="confirmpassword"> <br><br>
          <input type="submit" value="Register">
        </form>
+
+       <script>
+       const registerForm = document.getElementById('registerForm');
+       const emailField = document.getElementById('email');
+       const passField = document.getElementById('password');
+       const passConField = document.getElementById('confirmpassword');
+       const passMatch = document.getElementById('passmatch')
+
+       passConField.addEventListener('keyup', function(event) {
+         if (passConField == passField) {
+           passMatch.disabled = true;
+         } else {
+           passMatch.disabled = false;
+         }
+       });
+       </script>
+
      </body>
 </html>
