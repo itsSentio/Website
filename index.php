@@ -18,6 +18,7 @@
          <p id="passwordvalidation">Passwords must match</p>
          <p id="emailvalidation">Must be a valid email address</p>
          <p id="passwordstrengthvalidation">Password must contain: 8 characters with one uppercase letter, one lower case letter, one digit and a special character</p>
+         <p id="usernamevalidation">Username must be between 5 and 20 characters in length</p>
        </form>
      </body>
      <script src=listener.js></script>
