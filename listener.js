@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const strengthMessage = document.getElementById('passwordstrengthvalidation')
   const submitButton = document.getElementById('submitbutton')
 
+  function submitReady() {
+    if (validEmail && passwordStrength && passwordMatches) {
+      submitButton.disabled = false;
+    }
+  }
+
   function strengthCheck(password) {
         var regExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()]).{8,}/;
         var validPassword = regExp.test(password);
@@ -21,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (isValidEmail) {
       emailMessage.style.display = "none";
       emailField.style.borderColor = "black";
-      submitButton.disabled = false;
+      validEmail = true;
     } else {
       emailMessage.style.display = "block";
       emailField.style.borderColor = "red";
-      submitButton.disabled = true;
+      validEmail = false;
     }
   });
 
@@ -33,20 +39,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log(strengthCheck(passField.value));
     if (strengthCheck(passField.value)) {
       strengthMessage.style.display = "none";
-      submitButton.disabled = false;
+      passwordStrength = true;
     } else {
       strengthMessage.style.display = "block";
-      submitButton.disabled = true;
+      passwordStrength = false;
     }
 
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
-      submitButton.disabled = false;
+      passwordMatches = true;
     } else if (passConField.value != "") {
       passMessage.style.display = "block";
       passConField.style.borderColor = 'red';
-      submitButton.disabled = true;
+      passwordMatches = false;
     }
   });
 
@@ -54,11 +60,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
-      submitButton.disabled = false;
+      passwordMatches = true;
     } else {
       passMessage.style.display = "block";
       passConField.style.borderColor = 'red';
-      submitButton.disabled = true;
+      passwordMatches = false;
     }
   });
 });
