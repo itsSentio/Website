@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const passField = document.getElementById('passwordfield');
   const passConField = document.getElementById('confirmpasswordfield');
   const passMessage = document.getElementById('passwordvalidation')
-  const emailMessage = document.getElementById('passwordvalidation')
+  const emailMessage = document.getElementById('emailvalidation')
 
   emailField.addEventListener('keyup', function(event) {
     isValidEmail = emailField.checkValidity();
