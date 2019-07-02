@@ -4,14 +4,12 @@ const passField = document.getElementById('password');
 const passConField = document.getElementById('confirmpassword');
 const passMatch = document.getElementById('passmatch')
 
-function validatePassword() {
+passConField.addEventListener('keyup', function(event) {
   if (passConField.value == passField.value) {
     passMatch.style.display = "none";
-    passConField.style.borderColor = 'green';
+    passConField.style.borderColor = 'black';
   } else {
     passMatch.style.display = "block";
     passConField.style.borderColor = 'red';
   }
-}
-
-// passConField.addEventListener('keydown', function(event) {
+});
