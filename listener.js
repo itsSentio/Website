@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       emailMessage.style.display = "block";
       emailField.style.borderColor = "red";
     }
-  }
+  });
 
   passConField.addEventListener('keyup', function(event) {
     if (passConField.value == passField.value) {
