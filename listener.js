@@ -19,6 +19,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
+  passField.addEventListener('keyup', function(event) {
+    if (passConField.value == passField.value) {
+      passMessage.style.display = "none";
+      passConField.style.borderColor = 'black';
+    } else if (passConField.value != "") {
+      passMessage.style.display = "block";
+      passConField.style.borderColor = 'red';
+    }
+  });
+
   passConField.addEventListener('keyup', function(event) {
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
