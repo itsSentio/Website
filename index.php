@@ -16,6 +16,6 @@
          <input type="text" name="confirmpassword"> <br><br>
          <input type="submit" value="Register">
        </form>
-     <script src=listener.js></script>
      </body>
+     <script src=listener.js></script>
 </html>
