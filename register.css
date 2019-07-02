@@ -5,3 +5,7 @@
 #emailvalidation {
   display: none;
 }
+
+#passwordstrengthvalidation {
+  display: none;
+}
