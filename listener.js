@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const strengthMessage = document.getElementById('passwordstrengthvalidation')
   const submitButton = document.getElementById('submitbutton')
   const usernameMessage = document.getElementById('usernamevalidation')
+  const usernameField = document.getElementById('usernamefield')
 
   var validEmail = false;
   var passwordStrength = false;
