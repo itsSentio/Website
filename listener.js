@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return valid;
   }
 
-  usernameField.addEventListener('keyup', function(event)) {
+  usernameField.addEventListener('keyup', function(event) {
     if (validUsername(usernamefield.value)) {
       usernameValid = true;
       usernameMessage.style.display = "none";
