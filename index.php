@@ -16,24 +16,6 @@
          <input type="text" name="confirmpassword"> <br><br>
          <input type="submit" value="Register">
        </form>
-
-       <script>
-       const registerForm = document.getElementById('registerForm');
-       const emailField = document.getElementById('email');
-       const passField = document.getElementById('password');
-       const passConField = document.getElementById('confirmpassword');
-       const passMatch = document.getElementById('passmatch')
-
-       passConField.addEventListener('keyup', function(event) {
-         if (passConField == passField) {
-           passMatch.style.display = "none";
-           passConField.style.borderColor = 'green';
-         } else {
-           passMatch.style.display = "block";
-           passConField.style.borderColor = 'red';
-         }
-       });
-       </script>
-
+     <script src=listener.js></script>
      </body>
 </html>
