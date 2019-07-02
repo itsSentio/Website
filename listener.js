@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const submitButton = document.getElementById('submitbutton')
 
   function submitReady() {
+    console.log(validEmail)
     if (validEmail && passwordStrength && passwordMatches) {
       submitButton.disabled = false;
     }
