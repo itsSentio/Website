@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function validUsername(username) {
     valid = true;
-    if (/\s/g.test(username);) {
+    if (/\s/g.test(username)) {
       valid = false;
     }
 
