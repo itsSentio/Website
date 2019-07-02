@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     if (isValidEmail) {
       emailMessage.style.display = "none";
-      emailField.style.borderColor = "black";
+      emailField.style.borderColor = "transparent";
     } else {
       emailMessage.style.display = "block";
       emailField.style.borderColor = "red";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   passConField.addEventListener('keyup', function(event) {
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
-      passConField.style.borderColor = 'black';
+      passConField.style.borderColor = 'transparent';
     } else {
       passMessage.style.display = "block";
       passConField.style.borderColor = 'red';
