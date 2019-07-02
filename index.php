@@ -7,13 +7,13 @@
       <title>Register Test</title>
         <form id="registerForm" action="register.php" method="post">
          Username:<br>
-         <input type="text" name="username"><br>
+         <input type="text" name="username" id="usernamefield"><br>
          Email:<br>
-         <input type="email" name="email"><br>
+         <input type="email" name="email" id="emailfield"><br>
          Password:<br>
-         <input type="text" name="password"><p id="passmatch"> Passwords must match</p><br>
+         <input type="text" name="password" id="passwordfield"><p id="passmatch"> Passwords must match</p><br>
          Confirm Password:<br>
-         <input type="text" name="confirmpassword"><br><br>
+         <input type="text" name="confirmpassword" id="confirmpasswordfield"><br><br>
          <input type="submit" value="Register">
        </form>
      </body>

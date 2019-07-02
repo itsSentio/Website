@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
   const registerForm = document.getElementById('registerForm');
-  const emailField = document.getElementsByName('email');
-  const passField = document.getElementsByName('password');
-  const passConField = document.getElementsByName('confirmpassword');
+  const emailField = document.getElementById('emailfield');
+  const passField = document.getElementById('passwordfield');
+  const passConField = document.getElementById('confirmpasswordfield');
   const passMatch = document.getElementById('passmatch')
-  
+
   passConField.addEventListener('keyup', function(event) {
     if (passConField.value == passField.value) {
       passMatch.style.display = "none";
