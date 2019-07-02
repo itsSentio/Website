@@ -5,7 +5,7 @@ const passConField = document.getElementById('confirmpassword');
 const passMatch = document.getElementById('passmatch')
 
 passConField.addEventListener('keyup', function(event) {
-  if (passConField == passField) {
+  if (passConField.value == passField.value) {
     passMatch.style.display = "none";
     passConField.style.borderColor = 'green';
   } else {
