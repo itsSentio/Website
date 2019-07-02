@@ -20,37 +20,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (isValidEmail) {
       emailMessage.style.display = "none";
       emailField.style.borderColor = "black";
-      validEmail = true;
     } else {
       emailMessage.style.display = "block";
       emailField.style.borderColor = "red";
-      validEmail = false;
-    }
-    if (validEmail && passwordStrength && passwordMatches) {
-      submitButton.disabled = false;
     }
   });
 
   passField.addEventListener('keyup', function(event) {
     if (strengthCheck(passField.value)) {
       strengthMessage.style.display = "none";
-      passwordStrength = true;
     } else {
       strengthMessage.style.display = "block";
-      passwordStrength = false;
     }
 
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
-      passwordMatches = true;
     } else if (passConField.value != "") {
       passMessage.style.display = "block";
       passConField.style.borderColor = 'red';
-      passwordMatches = false;
-    }
-    if (validEmail && passwordStrength && passwordMatches) {
-      submitButton.disabled = false;
     }
   });
 
@@ -58,14 +46,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (passConField.value == passField.value) {
       passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
-      passwordMatches = true;
     } else {
       passMessage.style.display = "block";
       passConField.style.borderColor = 'red';
-      passwordMatches = false;
-    }
-    if (validEmail && passwordStrength && passwordMatches) {
-      submitButton.disabled = false;
     }
   });
 });
