@@ -1,3 +1,7 @@
-#passmatch {
+#passwordvalidation {
+  display: none;
+}
+
+#emailvalidation {
   display: none;
 }

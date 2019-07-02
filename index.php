@@ -15,7 +15,8 @@
          Confirm Password:<br>
          <input type="text" name="confirmpassword" id="confirmpasswordfield"><br><br>
          <input type="submit" value="Register">
-         <p id="passmatch">Passwords must match</p>
+         <p id="passwordvalidation">Passwords must match</p>
+         <p id="emailvalidation">Passwords must match</p>
        </form>
      </body>
      <script src=listener.js></script>

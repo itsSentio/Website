@@ -4,14 +4,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const emailField = document.getElementById('emailfield');
   const passField = document.getElementById('passwordfield');
   const passConField = document.getElementById('confirmpasswordfield');
-  const passMatch = document.getElementById('passmatch')
+  const passMessage = document.getElementById('passwordvalidation')
+  const emailMessage = document.getElementById('passwordvalidation')
+
+  emailField.addEventListener('keyup', function(event) {
+    isValidEmail = emailField.checkValidity();
+
+    if (isValidEmail) {
+      emailMessage.style.display = "none";
+      emailField.style.borderColor = "black";
+    } else {
+      emailMessage.style.display = "block";
+      emailField.style.borderColor = "red";
+    }
+  }
 
   passConField.addEventListener('keyup', function(event) {
     if (passConField.value == passField.value) {
-      passMatch.style.display = "none";
+      passMessage.style.display = "none";
       passConField.style.borderColor = 'black';
     } else {
-      passMatch.style.display = "block";
+      passMessage.style.display = "block";
       passConField.style.borderColor = 'red';
     }
   });
