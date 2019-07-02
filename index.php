@@ -13,7 +13,7 @@
          Password:<br>
          <input type="text" name="password"><p id="passmatch"> Passwords must match</p><br>
          Confirm Password:<br>
-         <input type="text" name="confirmpassword" onkeyup="validatePassword()"> <br><br>
+         <input type="text" name="confirmpassword"><br><br>
          <input type="submit" value="Register">
        </form>
      </body>
