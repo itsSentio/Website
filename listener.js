@@ -1,5 +1,5 @@
 const registerForm = document.getElementById('registerForm');
-const emailField = document.getElemenstByName('email');
+const emailField = document.getElementsByName('email');
 const passField = document.getElementsByName('password');
 const passConField = document.getElementsByName('confirmpassword');
 const passMatch = document.getElementById('passmatch')
