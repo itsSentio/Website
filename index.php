@@ -11,7 +11,10 @@
          Email:<br>
          <input type="text" name="email"><br>
          Password:<br>
-         <input type="text" name="password"><?php if($_GET['password'] != $_GET['confirmpassword']) {<p id="passmatch">Passwords must match</p>}?><br>
+         <input type="text" name="password">
+         <?php if($_GET['password'] != $_GET['confirmpassword']) : ?>
+           <p id="passmatch">Passwords must match</p>
+         <?php endif; ?>
          Confirm Password:<br>
          <input type="text" name="confirmpassword"> <br><br>
          <input type="submit" value="Register">
