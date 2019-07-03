@@ -9,3 +9,7 @@
 #passwordstrengthvalidation {
   display: none;
 }
+
+#usernamevalidation {
+  display: none;
+}
